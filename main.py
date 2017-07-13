@@ -136,9 +136,30 @@ def start_chat(spy):
     spy.name = spy.salutation + " " + spy.name
 
     if spy.age > 12 and spy.age < 50:
+        
+        
+        spy_rating = raw_input("What is your spy rating?")
+        spy_rating = float(spy_rating)
 
-        print "Authentication complete. Welcome " + spy.name + " age: " \
-              + str(spy.age) + " and rating of: " + str(spy.rating) + " Proud to have you onboard"
+        if spy_rating > 4.5:
+            print 'Great ace!'
+        elif spy_rating > 3.5 and spy_rating <= 4.5:
+            print 'You are one of the good ones.'
+        elif spy_rating >= 2.5 and spy_rating <= 3.5:
+            print 'You can always do better'
+        else:
+            print 'We can always use somebody to help in the office.'
+
+        spy_is_online = True
+        print "Authentication complete. Welcome " + spy_name + " age: " + str(spy_age) + " and rating of: " + str(spy_rating) + " Proud to have you onboard"
+        else:
+        print 'Sorry you are not of the correct age to be a spy'
+
+
+else:
+
+    print "A spy needs to have a valid name. Try again please."
+
 
         show_menu = True
 
